@@ -23,6 +23,11 @@ if( !defined( 'ABSPATH' ) ) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="profile" href="http://gmpg.org/xfn/11"/>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
+	<style>
+		#menu-main-menu-1 {
+			background-color: #282a35;
+		}
+	</style>
 <?php
 
 // facebook fix for wrong thumbnail image when using facebook share button
@@ -38,7 +43,7 @@ if ( is_single() ) {
 
 wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-image: none !important; background-color: white !important;">
 <?php wp_body_open(); ?>
 
 <?php if ( get_theme_mod( 'gameleon_show_meta_category' ) ) { ?>
@@ -183,7 +188,7 @@ locate_template('parts/top-menu.php', true ); // yep, load the top menu
 				switch ( $value ) { 
 
 				case 'block_logo_ad': // logo + ad
-				echo '<div class="header-inner">';
+				echo '<div class="header-inner" style="margin-right: inherit; margin-left: inherit;">';
 				locate_template('parts/header-boxed-logo-ad.php', true );
 				echo '</div>';
 				break;
@@ -238,6 +243,9 @@ locate_template('parts/top-menu.php', true ); // yep, load the top menu
 ?>
 
 </div><?php // end of #header ?>
+		<script>
+	jQuery(".menu-item-353").removeClass("fa-home");
+</script>
 <div id="wrapper-content">
 <?php gameleon_header_bottom(); // after header content hook ?>
 

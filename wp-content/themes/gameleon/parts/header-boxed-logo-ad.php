@@ -28,7 +28,7 @@ if ( $td_logo_title ) {
 // read the custom logo image if it's set
 if( $td_logo && $td_logo != '' ) : ?>
 <div id="logo">
-	<h1><a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( $td_logo ); ?>" width="250" height="100" alt="<?php echo esc_attr( $td_logo_alt ); ?>" title="<?php echo esc_attr( $td_logo_title ); ?>" /></a></h1>
+	<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url( $td_logo ); ?>" width="250" height="100" alt="<?php echo esc_attr( $td_logo_alt ); ?>" title="<?php echo esc_attr( $td_logo_title ); ?>" /></a>
 </div>
 <?php else : // show the text logo if the logo image isn't set ?>
 <h1>

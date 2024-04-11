@@ -22,11 +22,11 @@ if ( $td_sticky_menu ) {
 
 ?>
 
-<div class="desktop-handle td-auto-hide-header" id="topbar">
+<div class="desktop-handle td-auto-hide-header" id="topbar" style="background-color: #282a35 !important;">
 
 <div class="container">
 <div id="wrapper-menu" class="<?php echo esc_attr( $td_sticky ); ?>">
-  <div class="td-wrapper-box">
+  <div class="td-wrapper-box" style="margin-right: inherit; margin-left: inherit;">
   <div class="td-shadow">
   <?php if ( has_nav_menu( 'mainmenu' ) ) : ?>
 		<div id="top-navigation">

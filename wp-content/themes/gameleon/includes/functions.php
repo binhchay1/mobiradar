@@ -629,8 +629,7 @@ if( !function_exists( 'gameleon_related_posts' ) ) {
 
 
     $tags = wp_get_post_tags( $post->ID );
-
-    if ( $td_related_post == 0 or 1 == $category[0]->count) { // hide the related box if is disabled in theme options or there is only one post in a category, or the post has no tags
+    if ( $td_related_post == 0 or 1 == $category[0]->count ) { // hide the related box if is disabled in theme options or there is only one post in a category, or the post has no tags
       return;
     }
 

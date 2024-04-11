@@ -2,9 +2,35 @@ code,sub,sup{position:relative}.wp-block-calendar a,.wp-block-file a,.wp-block-i
 
 .post-sapor {
     border: none;
-    padding: 30px 40px;
+    padding: 15px 15px 15px 30px;
     background: #088565;
     color: white;
     border-radius: 90px;
     font-weight: bold;
+	font-style: italic !important;
+}
+
+.fa-home:before {
+	content: '' !important;
+}
+
+.modern-ticker {
+	max-width: inherit;
+	margin: 0;
+}
+
+#menu-main-menu-1 li a:hover {
+	color: #f35b30 !important;
+}
+
+.td-view-all {
+	color: #f35b30 !important;
+}
+
+.td-subtitle {
+	color: #f35b30 !important;
+}
+
+.td-wide-mode .sticky-wrapper.is-sticky #wrapper-menu {
+	background-color: #282a35 !important;
 }

@@ -223,21 +223,28 @@ if (is_active_sidebar('main-sidebar') || is_active_sidebar('sticky-sidebar')) {
 				<h3><?php _e('Game Details', 'gameleon'); ?></h3>
 
 			<?php else : ?>
-
-				<?php the_title('<h1>', '</h1>'); ?>
+				<?php $getMetaHeading = get_post_meta(get_the_ID(), 'custom_heading'); ?>
+				<?php if (!empty($getMetaHeading)) : ?>
+				<div style="text-align: center;">
+					<h1>
+						<?php echo $getMetaHeading[0] ?>
+					</h1>
+				</div>
+			<?php endif; ?>
 
 			<?php endif; // end of check "MYARCADE_VERSION" 
 			?>
 
 		</div>
 		<?php
-		$getMeta = get_post_meta(get_the_ID(), 'post_sapor');
+		$getMetaSapor = get_post_meta(get_the_ID(), 'post_sapor');
 		?>
+		
 
-		<?php if (!empty($getMeta)) : ?>
-			<div class="td-wrap-content post-sapor">
-				<?php echo $getMeta[0] ?>
-			</div>
+		<?php if (!empty($getMetaSapor)) : ?>
+		<div class="td-wrap-content post-sapor">
+			<?php echo $getMetaSapor[0] ?>
+		</div>
 		<?php endif; ?>
 		<div class="td-wrap-content">
 
